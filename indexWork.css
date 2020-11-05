@@ -1,0 +1,285 @@
+@font-face {
+        font-family: Oswald;
+        src: url(Oswald-VariableFont_wght.ttf);
+    }
+    body {
+        font-family: Oswald; 
+        color: black;  
+        margin: 0px;
+    }
+    .container {
+        display: flex;
+        background-color: #659DBD;
+        border: 20px solid navy;
+        min-height: 100vh;
+        flex-wrap: wrap;
+    }
+    .boxTitle {
+        color: black;
+        font-size: 50px;
+        font-weight: 700;
+        text-align: left;
+        padding-top: 50px;
+        padding-left: 30px;
+        width: 50%;
+    }
+    .boxRev {
+        color: black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: right;
+        padding-left: 700px;
+        padding-top: 50px;
+    }
+    .boxIntro {
+        color: black;
+        font-size: 45px;
+        font-weight: 700;
+        text-align: left;
+        padding: 50px;
+        width: 100vw;
+        height: auto;
+    }
+    .boxBody {
+        color: black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: left;
+        padding-left: 100px;
+        padding-bottom: 50px;
+    }
+    .boxBodyText {
+        color: black;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: left;
+        padding-left: 100px;
+        padding-bottom: 100px;
+    }
+    .boxBody2 {
+        color: black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        width: 100vw;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .boxProject1 {
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: left;
+        height: 449px;
+        width: 50%;
+        margin: auto;
+    }
+    .boxProject1 div{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: black;
+        color:whitesmoke;
+        margin-bottom: 5px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: visibility 0s, opacity 0.5s linear; 
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .boxProject1:hover{
+        cursor: pointer;
+    }
+    .boxProject1:hover div{
+        width: 900px;
+        height: 350px;
+        padding-top: 100px;
+        visibility: visible;
+        opacity: 0.80; 
+    }
+    .boxProject2 {
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: left;
+        height: 449px;
+        width: 50%;
+        margin: auto;
+    }
+    .boxProject2 div{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: black;
+        color:whitesmoke;
+        margin-bottom: 5px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: visibility 0s, opacity 0.5s linear; 
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .boxProject2:hover{
+        cursor: pointer;
+    }
+    .boxProject2:hover div{
+        width: 900px;
+        height: 350px;
+        padding-top: 100px;
+        visibility: visible;
+        opacity: 0.80; 
+    }
+    .boxProject3 {
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: left;
+        height: 449px;
+        width: 50%;
+        margin: auto;
+    }
+    .boxProject3 div{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: black;
+        color:whitesmoke;
+        margin-bottom: 5px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: visibility 0s, opacity 0.5s linear; 
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .boxProject3:hover{
+        cursor: pointer;
+    }
+    .boxProject3:hover div{
+        width: 900px;
+        height: 350px;
+        padding-top: 100px;
+        visibility: visible;
+        opacity: 0.80; 
+    }
+    .boxProject4 {
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+        text-align: left;
+        height: 449px;
+        width: 50%;
+        margin: auto;
+    }
+    .boxProject4 div{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: black;
+        color:whitesmoke;
+        margin-bottom: 5px;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: visibility 0s, opacity 0.5s linear; 
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .boxProject4:hover{
+        cursor: pointer;
+    }
+    .boxProject4:hover div{
+        width: 900px;
+        height: 350px;
+        padding-top: 100px;
+        visibility: visible;
+        opacity: 0.80; 
+    }
+    .boxResume {
+        font-size: 25px;
+        color: black;
+        font-weight: 700;
+        text-align: center;
+        width: 100vw;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    .boxNav {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        border: 20px solid navy;
+        padding: 10px;
+        width: 100vw;
+        height: auto;
+    }
+    .nav_links {
+        list-style: none;
+    }
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 70px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .img {
+        margin-left: 0px;
+        bottom: 50px;
+        left: 0;
+    }
+    .containerHome {
+        display: flex;
+        background-color: black;
+        color: limegreen;
+        min-height: 100vh;
+        flex-wrap: wrap;
+    }
+    .fade-in {
+        animation: fadeIn ease 10s;
+        -webkit-animation: fadeIn ease 10s;
+        -moz-animation: fadeIn ease 10s;
+        -o-animation: fadeIn ease 10s;
+        -ms-animation: fadeIn ease 10s;
+      }@keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+      
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+   
+
+
