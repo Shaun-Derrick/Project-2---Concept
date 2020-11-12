@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="scan.css">
-        <title>Blue Bin Recycling Depots</title>
-    </head>
-        <body>
-            <div class="wrapper">
-                <div class="boxTitle">
-                    <h1>WELCOME TO BLUE BIN<br/>CONTAINER RECYCLING DEPOT</h1>
-                </div>
-                <div class="boxLogo">
-                    <img src= 'images/recycle-green-earth.jpg' width='70%' height='70%'>
-                </div>
-                <div class="boxTerminal">Terminal #0001</div>
-                <div class="boxInstructions">
-                    <h2>INSTRUCTIONS</h2>
-                    <div>Follow the instructions below to begin a transaction.</div>
-                    <ol>
-                        <li>Place containers in the tray with barcodes facing you.</li>
-                        <li>Once the tray is loaded push the scan button.</li>
-                        <li>Repeat steps 1 and 2 until all containers have been scanned.</li>
-                        <li>Press conmplete transaction to receive your refund.</li>
-                    </ol>
-                </div>
-                <div class="boxScan">Press to Scan Containers</div>
-                    <!--Assign transaction number and terminal number.  Add to cart?-->
-                    <!--button-submit form which includes barcode to simulate scanning?-->
-                    <!--Use object to populate barcode and then replace contents in object with if === in Javascript with properties already in database?-->
-                    <!--Fetch/Post barcode to server populate json based on barcode?-->
-                    <!--Assign a new object for each new scan-->
-                <div class="boxSubTotal">
-                    <div>SUB-TOTAL<br/>$0.00</div>
-                </div>
-                    <!--Accumulate sub-total of transaction-->
-                <div class="boxNav">
-                    <ul class="nav_links">
-                        <li><a href=refund.html style="color: black;"><p>Click Here To Check Out / Claim Your Refund</p></a></li>
-                    </ul>
-                    </div>
-                <div class="boxHelp">If this terminal is not functioning correctly or has been damaged please call 867-5309</div>
-            </div>
-        </body>
+  <head>
+    <link rel="stylesheet" href="scan.css" />
+    <title>Blue Bin Recycling Depots</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="boxTitle">
+        <h1>WELCOME TO BLUE BIN<br />CONTAINER RECYCLING DEPOT</h1>
+      </div>
+      <div class="boxLogo">
+        <img src="images/recycle-green-earth.jpg" width="70%" height="70%" />
+      </div>
+      <div class="boxTerminal">Terminal #0001</div>
+      <div class="boxInstructions">
+        <h2>INSTRUCTIONS</h2>
+        <div>Follow the instructions below to begin a transaction.</div>
+        <ol>
+          <li>Place containers in the tray with barcodes facing you.</li>
+          <li>Once the tray is loaded push the scan button.</li>
+          <li>Repeat steps 1 and 2 until all containers have been scanned.</li>
+          <li>Press conmplete transaction to receive your refund.</li>
+        </ol>
+      </div>
+      <div class="boxScan">Press to Scan Containers</div>
+      <div class="inputArea">
+        <input style="text" id="newTitle" />
+        <div class="button" onclick="addRecord()">Add Record</div>
+      </div>
+      <div class="records" id="showAllRecords"></div>
+      <!--Assign transaction number and terminal number.  Add to cart?-->
+      <!--button-submit form which includes barcode to simulate scanning?-->
+      <!--Use object to populate barcode and then replace contents in object with if === in Javascript with properties already in database?-->
+      <!--Fetch/Post barcode to server populate json based on barcode?-->
+      <!--Assign a new object for each new scan-->
+      <div class="boxSubTotal">
+        <div>SUB-TOTAL<br />$0.00</div>
+      </div>
+      <!--Accumulate sub-total of transaction-->
+      <div class="boxNav">
+        <ul class="nav_links">
+          <li>
+            <a href="refund.html" style="color: black"
+              ><p>Click Here To Check Out / Claim Your Refund</p></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="boxHelp">
+        If this terminal is not functioning correctly or has been damaged please
+        call 867-5309
+      </div>
+    </div>
+    <script src="functions.js"></script>
+  </body>
 </html>
