@@ -31,11 +31,13 @@ app.get('/bottles', function(req, res){
   res.send(bottles)
 })
 
-ß
+
 
 app.post('/bottles', function(req, res){
   const newRecord = req.body
   console.log(typeof(newRecord.bottleUPC))
+  newRecord = newRecord.parseInt(newRecord.bottleUPC)
+  console.log(`This should be a number ${newRecord}`)
 
   bottles.forEach(bottle => {
     console.log(typeof(bottle.upc))
