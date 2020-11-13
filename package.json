@@ -1,0 +1,25 @@
+{
+  "name": "project-2---concept",
+  "version": "1.0.0",
+  "description": "<a href='https://www.freepik.com/vectors/logo'>Logo vector created by titusurya - www.freepik.com</a>",
+  "main": "functions.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shaun-Derrick/Project-2---Concept.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shaun-Derrick/Project-2---Concept/issues"
+  },
+  "homepage": "https://github.com/Shaun-Derrick/Project-2---Concept#readme"
+}
