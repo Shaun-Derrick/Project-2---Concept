@@ -3,19 +3,26 @@ let knownBottles = [
     id: '1',
     upc: '0067000104022',
     brand: 'Coca Cola',
-    volume: '755 mL',
+    volume: 0.755,
     value: '0.1',
   },
   {
     id: '2',
     upc: '06741602',
     brand: 'Coca Cola',
-    volume: '1 Liter',
+    volume: 1,
     value: '0.25',
   },
 ]
-bottles = []
 
+let bottleTransaction = {
+  id: 0,
+  total: 0,
+  value: 0,
+  over1L: 0,
+  under1L: 0,
+  upc: [],
+}
 const express = require('express')
 const cors = require('cors')
 const app = express()
@@ -31,18 +38,35 @@ const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Server listening on ${port}...`))
 
 app.get('/bottles', (req, res) => {
-  res.send(bottles)
+  res.send(bottleTransaction)
+})
+
+app.get('/bottles/:total', (req, res) => {
+  const items = bottleTransaction.find(
+    (transaction) => transaction.total === req.params.brand,
+  )
+  if (!items) res.status(404).send('Nothing was found here')
+  res.send(items)
 })
 
 app.post('/bottles', function (req, res) {
   const scannedItem = req.body
 
-  console.log(`This should be a number ${scannedItem.bottleUPC}`)
+  console.log(`This should be a number ${scannedItem.upc}`)
 
   knownBottles.forEach((bottle) => {
-    if (scannedItem.bottleUPC === bottle.upc) {
-      scannedItem.id = bottles.length + 1
-      bottles.push(bottle)
+    if (scannedItem.upc === bottle.upc) {
+      //bottleTransaction.id = bottleTransaction.length + 1
+      bottleTransaction.total = bottleTransaction.total += 1
+      if (bottle.volume >= 1) {
+        bottleTransaction.value += 0.25
+        bottleTransaction.over1L += 1
+      } else if (bottle.volume < 1) {
+        bottleTransaction.value += 0.1
+        bottleTransaction.under1L += 1
+      } else {
+        return 0
+      }
     } else {
       console.log('Please scan a valid code')
     }
