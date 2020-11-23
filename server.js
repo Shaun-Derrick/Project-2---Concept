@@ -1,13 +1,13 @@
 let knownBottles = [
   {
-    id: '1',
+    id: 1,
     upc: '0067000104022',
     brand: 'Coca Cola',
     volume: 0.755,
     value: '0.1',
   },
   {
-    id: '2',
+    id: 2,
     upc: '06741602',
     brand: 'Coca Cola',
     volume: 1,
@@ -17,11 +17,12 @@ let knownBottles = [
 
 let bottleTransaction = {
   id: 0,
+  date: Date(),
   total: 0,
   value: 0,
   over1L: 0,
   under1L: 0,
-  upc: [],
+  bottleList: [],
 }
 const express = require('express')
 const cors = require('cors')
@@ -41,14 +42,6 @@ app.get('/bottles', (req, res) => {
   res.send(bottleTransaction)
 })
 
-app.get('/bottles/:total', (req, res) => {
-  const items = bottleTransaction.find(
-    (transaction) => transaction.total === req.params.brand,
-  )
-  if (!items) res.status(404).send('Nothing was found here')
-  res.send(items)
-})
-
 app.post('/bottles', function (req, res) {
   const scannedItem = req.body
 
@@ -57,7 +50,11 @@ app.post('/bottles', function (req, res) {
   knownBottles.forEach((bottle) => {
     if (scannedItem.upc === bottle.upc) {
       //bottleTransaction.id = bottleTransaction.length + 1
+
+      //Bottle Count
       bottleTransaction.total = bottleTransaction.total += 1
+
+      //Sumtotal and litre size count
       if (bottle.volume >= 1) {
         bottleTransaction.value += 0.25
         bottleTransaction.over1L += 1
@@ -67,9 +64,12 @@ app.post('/bottles', function (req, res) {
       } else {
         return 0
       }
+
+      bottleTransaction.bottleList.push(bottle)
     } else {
       console.log('Please scan a valid code')
     }
     // console.log(`This is a test ${bottle.upc}`)
   })
+  console.log(bottleTransaction)
 })

@@ -1,102 +1,112 @@
 @font-face {
-    font-family: Oswald;
-    src: url(Oswald-VariableFont_wght.ttf);
+  font-family: Oswald;
+  src: url(Oswald-VariableFont_wght.ttf);
 }
 body {
-    font-family: Oswald; 
-    color: rgb(0, 81, 128);  
-    margin: 0px;
-}
-.wrapper {
-    display: flex;
-    background-color: white;
-    border: 20px solid  rgb(0, 81, 128);
-    min-height: 100vh;
-    flex-wrap: wrap;
-}
-.boxTitle {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 50%vw;
-    height: auto,
-}
-.boxTerminal {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: right;
-    align-content: flex-end;
-    padding-top: 0px;
-    padding-left: 700px;
-    width: 100%;
-    max-height: 50px,
-}
-.boxLogo {
-    display: flex;
-    justify-content: right;
-    padding-top: 0px;
-    padding-left: 820px;
-    width: 50%vw;
-    height: 10px,
-}
-.boxInstructions {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: left;
-    padding-left: 0px;
-    padding-top: 0px;
-    width: 100vw;
-}
-.boxScan {
-    background-color: navy;
-    color: black;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-right: 350px;
-    width: 50%vw;
-}
-.boxSubTotal {
-    background-color: lightseagreen;
-    color: black;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: left;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-right: 846px;
-    width: 50%vw;
-}
-.boxNav {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    background-color: rgb(230, 224, 255);
-    padding-top: 15px;
-    padding-bottom: 15px;
-    min-width: 100%;
-}
-.nav_links {
-    list-style: none;
-}
-.nav_links li {
-    display: inline-block;
-    padding: 0px 70px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 700;
-}
-.boxHelp {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100vw;
+  font-family: Oswald;
+  color: rgb(0, 81, 128);
+  margin: 0px;
 }
 
+.wrapper {
+  display: flex;
+  background-color: white;
+  border: 20px solid rgb(0, 81, 128);
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+h2 {
+  font-size: 10vw;
+}
+
+ul {
+  list-style: none;
+}
+.boxTitle {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 50%vw;
+  height: auto;
+}
+.boxTerminal {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: right;
+  align-content: flex-end;
+  padding-top: 0px;
+  padding-left: 700px;
+  width: 100%;
+  max-height: 50px;
+}
+.boxLogo {
+  display: flex;
+  justify-content: right;
+  padding-top: 0px;
+  padding-left: 820px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxInstructions {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 0px;
+  padding-top: 0px;
+  width: 100vw;
+}
+.boxScan {
+  background-color: navy;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: 350px;
+  width: 50%vw;
+}
+.boxSubTotal {
+  flex-direction: row;
+  background-color: lightseagreen;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-right: auto;
+  width: 50%vw;
+}
+#orderBox {
+}
+.boxNav {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(230, 224, 255);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-width: 100%;
+}
+.nav_links {
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 70px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+.boxHelp {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100vw;
+}

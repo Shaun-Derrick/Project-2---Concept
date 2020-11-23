@@ -30,7 +30,12 @@
                       <input type="text" id="numberSubmit" placeholder="Scan Code Now" >
                       <button id="getAPI" onclick="scanBottle()">Submit</button>
                     </form>
-                    <div id="bottles"></div>
+                    <div class="boxSubTotal">
+                        <div id="orderBox">
+                            <h2>Your Return</h2>
+                        <div id='orderTable'>
+                        </div>
+                    </div>
                   </div>
  
                     <!--Assign transaction number and terminal number.  Add to cart?-->
@@ -38,9 +43,7 @@
                     <!--Use object to populate barcode and then replace contents in object with if === in Javascript with properties already in database?-->
                     <!--Fetch/Post barcode to server populate json based on barcode?-->
                     <!--Assign a new object for each new scan-->
-                <div class="boxSubTotal">
-                    <div>SUB-TOTAL<br/>$0.00</div>
-                </div>
+
                     <!--Accumulate sub-total of transaction-->
                 <div class="boxNav">
                     <ul class="nav_links">
