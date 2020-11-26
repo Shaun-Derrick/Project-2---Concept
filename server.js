@@ -39,11 +39,11 @@ app.use(cors())
 const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Server listening on ${port}...`))
 
-app.get('/bottles', (req, res) => {
+app.get('/api/bottles', (req, res) => {
   res.send(bottleTransaction)
 })
 
-app.post('/bottles', function (req, res) {
+app.post('/api/bottles', function (req, res) {
   const scannedItem = req.body
 
   console.log(`This should be a number ${scannedItem.upc}`)

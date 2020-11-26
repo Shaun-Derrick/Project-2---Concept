@@ -1,5 +1,5 @@
 function allBottles() {
-  fetch('http://localhost:5000/bottles')
+  fetch('http://localhost:5000/api/bottles')
     .then((response) => response.json())
     .then((bottles) => {
       let orderTable = `
@@ -15,7 +15,7 @@ function scanBottle() {
 
   const upcCode = bottleUpc.value
 
-  fetch('http://localhost:5000/bottles', {
+  fetch('http://localhost:5000/api/bottles', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ upc: upcCode }),
