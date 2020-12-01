@@ -81,6 +81,7 @@ ul {
   width: 50%vw;
 }
 #orderBox {
+  display: flex;
 }
 .boxNav {
   font-size: 50px;
