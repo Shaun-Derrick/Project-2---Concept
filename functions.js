@@ -14,7 +14,6 @@ function scanBottle() {
   const bottleUpc = document.getElementById('numberSubmit')
 
   const upcCode = bottleUpc.value
-
   fetch('http://localhost:5000/api/bottles/bottles', {
     method: 'post',
     headers: { 'Content-Type': 'application/json' },
