@@ -83,7 +83,7 @@ router.post("/bottles", function (req, res) {
   console.log(bottleTransaction);
 });
 // added new post response to change processed key value from false to true
-app.post("/api/bottles/bottles2", (req, res) => {
+router.post("/api/bottles/bottles2", (req, res) => {
   const changes = req.body;
   console.log(`Changes is : ${JSON.stringify(changes)}`);
   bottleTransaction = { ...bottleTransaction, ...changes };
