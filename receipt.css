@@ -1,0 +1,201 @@
+@font-face {
+  font-family: Oswald;
+  src: url(Oswald-VariableFont_wght.ttf);
+}
+body {
+  font-family: Oswald;
+  color: rgb(0, 81, 128);
+  margin: 0px;
+}
+.wrapper {
+  display: flex;
+  background-color: white;
+  border: 20px solid rgb(0, 81, 128);
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+.boxTitle {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 100vw;
+  height: auto;
+}
+.boxDate {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 700px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcDate {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxTransNum {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 20px;
+  margin-left: 420px;
+  padding-left: 50px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcTransNum {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxTermNum {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 20px;
+  margin-left: 470px;
+  padding-left: 50px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcTermNum {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxUser {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 700px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcUser {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxRefund {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 560px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcRefund {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcessed {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  margin-left: 610px;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxProcProcessed {
+  display: flex;
+  flex-direction: row;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 100px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+  width: 50%vw;
+  height: 10px;
+}
+.boxThanks {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 200px;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100vw;
+}
+.boxHelp {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 100px;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100vw;
+}
