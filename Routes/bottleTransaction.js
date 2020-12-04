@@ -3,7 +3,7 @@ const router = require("express").Router();
 let knownBottles = [
   {
     id: 1,
-    upc: "0067000104022",
+    upc: "067000104022",
     brand: "Coca Cola",
     volume: 0.755,
     value: "0.1",
@@ -29,6 +29,13 @@ let knownBottles = [
     volume: 2,
     value: "0.25",
   },
+  {
+    id: 5,
+    upc: "065700100269",
+    brand: "Beatrice",
+    volume: 4,
+    value: "0.25",
+  },
 ];
 // Added to other unique bottles to known bottles
 
@@ -43,6 +50,7 @@ let bottleTransaction = {
   under1L: 0,
   bottleList: [],
   processed: false,
+  user: "Jenny",
 };
 // added keys and values to bottleTransaction
 
@@ -83,12 +91,16 @@ router.post("/bottles", function (req, res) {
   console.log(bottleTransaction);
 });
 // added new post response to change processed key value from false to true
-router.post("/api/bottles/bottles2", (req, res) => {
+router.post("/bottles2", (req, res) => {
   const changes = req.body;
   console.log(`Changes is : ${JSON.stringify(changes)}`);
   bottleTransaction = { ...bottleTransaction, ...changes };
   console.log(`Bottle transaction is : ${JSON.stringify(bottleTransaction)}`);
   // Object.assign(changes);
+  res.send(bottleTransaction);
+});
+
+router.get("/bottles3", (req, res) => {
   res.send(bottleTransaction);
 });
 

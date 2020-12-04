@@ -4,23 +4,23 @@
     <link rel="stylesheet" href="receipt.css" />
     <title>Blue Bin Recycling Depots-Check Out</title>
   </head>
-  <body onload="reward()">
+  <body onload="OnloadFunction(); reward()">
     <div class="wrapper">
       <div class="boxTitle">
         <h1>BLUE BIN CONTAINER RECYCLING DEPOT - REFUND RECEIPT</h1>
       </div>
       <div class="boxDate">Date:</div>
-      <div class="boxProcDate">"Processed Date"</div>
+      <div class="boxProcDate" , id="processedDate"></div>
       <div class="boxTransNum">Transaction Number:</div>
-      <div class="boxProcTransNum">"Processed Transaction Number"</div>
+      <div class="boxProcTransNum" , id="processedTransNum"></div>
       <div class="boxTermNum">Terminal Number:</div>
-      <div class="boxProcTermNum">"Processed Terminal Number"</div>
+      <div class="boxProcTermNum" id="processedTermNum"></div>
       <div class="boxUser">User:</div>
-      <div class="boxProcUser">"User Id"</div>
+      <div class="boxProcUser" , id="processedUserName"></div>
       <div class="boxRefund">Refund Total:</div>
-      <div class="boxProcRefund">"Processed Refund Total"</div>
+      <div class="boxProcRefund" , id="processedRefund"></div>
       <div class="boxProcessed">Processed:</div>
-      <div class="boxProcProcessed">"Processed Boolean"</div>
+      <div class="boxProcProcessed" , id="processedTransaction"></div>
       <div class="boxHelp">
         Thank you for taking the time to recycle today and for doing your part
         to help keep our environment clean!
@@ -30,6 +30,6 @@
         call 867-5309
       </div>
     </div>
-    <script src="functions.js"></script>
+    <script src="receipt.js"></script>
   </body>
 </html>
