@@ -84,7 +84,6 @@ router.post('/bottles', async (req, res) => {
   console.log(bottleTransaction)
 })
 // added new post response to change processed key value from false to true
-//router.post('/api/bottles/bottles2', (req, res) => {
 router.post('/bottles2', (req, res) => {
   const changes = req.body
   console.log(`Changes is : ${JSON.stringify(changes)}`)

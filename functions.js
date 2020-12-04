@@ -34,9 +34,3 @@ function processTransaction() {
       window.location = "refund.html";
     });
 }
-// Added reward function to receipt page
-function reward() {
-  alert(
-    "Your business is appreciated! We would like to show our apreciation to you by providing a coupon for $2.00 off your next coffee at our partner Good Earth Cafe.  The coupon is on the back of your receipt."
-  );
-}

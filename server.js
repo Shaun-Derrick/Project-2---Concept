@@ -4,6 +4,7 @@ const cors = require('cors')
 const app = express()
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
+//const request = require('request')
 const authRoute = require('./Routes/auth')
 const postRoute = require('./Routes/posts')
 const bottleRoute = require('./Routes/bottleTransaction')
@@ -27,6 +28,7 @@ app.use('/api/user', authRoute)
 app.use('/api/posts', postRoute)
 app.use('/api/bottles', bottleRoute)
 app.use('/api/bottles2', bottleRoute)
+app.use('/api/bottles3', bottleRoute)
 
 //PORTS
 //Don't forget to run export PORT=5000 in the terminal to set the port
