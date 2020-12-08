@@ -1,10 +1,9 @@
 function OnloadFunction() {
   loadReceipt();
   function loadReceipt() {
-    fetch("http://localhost:5000/api/bottles/bottles3")
+    fetch("http://localhost:5000/api/bottles/bottles2")
       .then((response) => response.json())
       .then((bottleTransaction) => loadReceiptOnPage(bottleTransaction));
-    //   .catch((error) => console.log("error", error));
   }
 
   //   fetch bottle transaction object from server

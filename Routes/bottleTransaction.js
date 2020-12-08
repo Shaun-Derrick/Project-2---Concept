@@ -100,7 +100,7 @@ router.post("/bottles2", (req, res) => {
   res.send(bottleTransaction);
 });
 
-router.get("/bottles3", (req, res) => {
+router.get("/bottles2", (req, res) => {
   res.send(bottleTransaction);
 });
 

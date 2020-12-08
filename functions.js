@@ -34,3 +34,22 @@ function processTransaction() {
       window.location = "refund.html";
     });
 }
+// setInterval to refresh total refund after bypassing submit button. Did Tony comment out the name of the function in Amir's example?
+setInterval(allBottles, 3000);
+
+function simulateScanProgress() {
+  let elem = document.getElementById("myBar");
+  let width = 0;
+  let id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + "%";
+      document.getElementById("demo").innerHTML = "Scanning " + width * 1 + "%";
+      // elem.style.width = width + "%";
+      // document.getElementById("demo").innerHTML = width * 1 + "%";
+    }
+  }
+}
