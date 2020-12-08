@@ -10,12 +10,15 @@ body {
 
 .wrapper {
   display: flex;
+  justify-content: center;
   background-color: white;
   border: 20px solid rgb(0, 81, 128);
   min-height: 100vh;
   flex-wrap: wrap;
 }
-
+h1 {
+  padding: 70px;
+}
 ul {
   list-style: none;
 }
@@ -23,26 +26,29 @@ ul {
   font-size: 30px;
   font-weight: 700;
   text-align: left;
-  padding-top: 10px;
-  padding-left: 30px;
+  /* padding-top: 10px;
+  padding-left: 30px; */
   max-width: 50%vw;
   height: auto;
 }
 .boxTerminal {
+  justify-content: right;
+  margin: 50px;
   font-size: 50px;
   font-weight: 700;
   text-align: right;
   align-content: flex-end;
-  padding-top: 0px;
-  padding-left: 700px;
+
+  /* padding-left: 700px; */
   width: 100%;
   max-height: 50px;
 }
 .boxLogo {
   display: flex;
-  justify-content: right;
-  padding-top: 50px;
-  padding-left: 800px;
+  justify-content: center;
+  align-content: flex-end;
+  /* padding-top: 50px;
+  padding-left: 800px; */
   max-width: 50%vw;
   height: 200px;
 }
@@ -50,8 +56,9 @@ ul {
   font-size: 40px;
   font-weight: 700;
   text-align: left;
-  padding-left: 0px;
-  padding-top: 0px;
+  padding: 70px;
+  /* padding-left: 0px;
+  padding-top: 0px; */
   width: 100vw;
 }
 .boxScan {
