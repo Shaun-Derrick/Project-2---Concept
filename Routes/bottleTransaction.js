@@ -118,4 +118,8 @@ router.post('/bottles2', (req, res) => {
   res.send(bottleTransaction)
 })
 
+router.get('/bottles2', (req, res) => {
+  res.send(bottleTransaction)
+})
+
 module.exports = router
