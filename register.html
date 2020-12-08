@@ -70,7 +70,7 @@ form.addEventListener('submit', async (e) => {
     const data = await res.json()
   console.log(data)
   if (data.user) {
-      location.assign('/scan.html')
+      location.assign('/scan.html?token='+(data.user))
     }
   } 
   catch (err) {

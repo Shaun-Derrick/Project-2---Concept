@@ -1,5 +1,4 @@
-//
-const { array, number } = require('joi')
+const jwt = require('jsonwebtoken') //SETUP A WEBTOKEN
 const mongoose = require('mongoose')
 
 //THIS IS THE SCHEMA FOR BUILDING THE DB
@@ -29,47 +28,14 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  id: {
-    type: Number,
-    default: 0,
-  },
-  terminal: {
-    type: Number,
-    require: false,
-  },
-  transactionNumber: {
-    type: Number,
-    require: false,
-  },
-  date: {
-    type: Number,
-    require: false,
-  },
-  total: {
-    type: Date,
-    require: false,
-  },
-  value: {
-    type: Number,
-    require: false,
-  },
-  over1L: {
-    type: Number,
-    require: false,
-  },
-  under1L: {
-    type: Number,
-    require: false,
-  },
-  bottleList: [
-    {
-      id: { type: Number },
-      upc: { type: String },
-      brand: { type: String },
-      volume: { type: Number },
-      value: { type: String },
-    },
-  ],
 })
+
+//ASSIGNING A TOKEN TO CONFIRM LOGGED IN PERSON
+userSchema.methods.generateAuthToken = function () {
+  console.log(`This is the id of the user that is found on DBmongo ${this._id}`)
+  const token = jwt.sign({ _id: this._id }, process.env.TOKEN)
+  console.log(`This is the token assigned to the _id in mongoDB ${token}`)
+  return token
+}
 
 module.exports = mongoose.model('User', userSchema)
