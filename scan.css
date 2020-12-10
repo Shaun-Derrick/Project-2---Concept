@@ -85,7 +85,7 @@ ul {
   margin: 90px;
 }
 #orderBox {
-  display: flex;
+  /* display: flex; */
 }
 .boxNav {
   font-size: 50px;

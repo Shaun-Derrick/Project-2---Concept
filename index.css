@@ -1,82 +1,84 @@
 @font-face {
-    font-family: Oswald;
-    src: url(Oswald-VariableFont_wght.ttf);
+  font-family: Oswald;
+  src: url(Oswald-VariableFont_wght.ttf);
 }
 body {
-    font-family: Oswald; 
-    color: navy;  
-    margin: 0px;
+  font-family: Oswald;
+  margin: 0px;
 }
 .wrapper {
-    display: flex;
-    background-color: whitesmoke;
-    border: 20px solid navy;
-    min-height: 100vh;
-    flex-wrap: wrap;
+  display: flex;
+  background-color: whitesmoke;
+  border: 20px solid navy;
+  min-height: 100vh;
+  flex-wrap: wrap;
 }
 .boxTitle {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 50%vw;
-    height: auto,
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 50%vw;
+  height: auto;
 }
 .boxTerminal {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: right;
-    padding-top: 150px;
-    padding-left: 500px;
-    width: 50%vw;
-    height: auto,
+  font-size: 50px;
+  font-weight: 700;
+  text-align: right;
+  padding-top: 150px;
+  padding-left: 500px;
+  width: 50%vw;
+  height: auto;
 }
 .boxMission {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 0px;
-    width: 100vw;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 0px;
+  width: 100vw;
 }
 .boxStartTransaction {
-    background-color: navy;
-    color: black;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    min-width: 100%;
+  background-color: navy;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-width: 100%;
 }
 .boxBody {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100vw;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100vw;
 }
 .boxNav {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    background-color: navy;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    min-width: 100%;
+  font-size: 50px;
+  font-weight: 700;
+
+  text-align: center;
+  background-color: navy;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  min-width: 100%;
 }
 .nav_links {
-    list-style: none;
+  list-style: none;
+  display: inline-block;
+  list-style: none;
+  padding: 0px 70px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
 }
-.nav_links li {
-    display: inline-block;
-    padding: 0px 70px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 700;
+.nav_links a {
+  text-decoration: none;
+  color: whitesmoke;
 }
-

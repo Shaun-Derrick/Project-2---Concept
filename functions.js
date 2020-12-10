@@ -2,18 +2,17 @@ function allBottles() {
   fetch('http://localhost:5000/api/bottles/bottles')
     .then((response) => response.json())
     .then((bottles) => {
-      let orderTable = `
-      <ul>
-          <li>$${bottles.value.toFixed(2)}</li>
-        </ul>`
+      // let orderTable = `
+      // <ul>
+      //     <li>$${bottles.value.toFixed(2)}</li>
+      //   </ul>`
+      let orderTable = `<div>$${bottles.value.toFixed(2)}<div>`
       document.getElementById('orderTable').innerHTML = orderTable
     })
 }
 
 const urlParams = new URLSearchParams(window.location.search)
 const myParam = urlParams.get('token')
-console.log(`This is myParam:${myParam}`)
-console.log(`This is my token: ${myParam}`)
 
 function scanBottle() {
   const bottleUpc = document.getElementById('numberSubmit')
@@ -40,19 +39,19 @@ function processTransaction() {
     })
 }
 // setInterval to refresh total refund after bypassing submit button. Did Tony comment out the name of the function in Amir's example?
-setInterval(allBottles, 3000);
+setInterval(allBottles, 3000)
 
 function simulateScanProgress() {
-  let elem = document.getElementById("myBar");
-  let width = 0;
-  let id = setInterval(frame, 50);
+  let elem = document.getElementById('myBar')
+  let width = 0
+  let id = setInterval(frame, 50)
   function frame() {
     if (width >= 100) {
-      clearInterval(id);
+      clearInterval(id)
     } else {
-      width++;
-      elem.style.width = width + "%";
-      document.getElementById("demo").innerHTML = "Scanning " + width * 1 + "%";
+      width++
+      elem.style.width = width + '%'
+      document.getElementById('demo').innerHTML = 'Scanning ' + width * 1 + '%'
       // elem.style.width = width + "%";
       // document.getElementById("demo").innerHTML = width * 1 + "%";
     }
