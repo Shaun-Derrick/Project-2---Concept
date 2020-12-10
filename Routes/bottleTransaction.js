@@ -1,6 +1,9 @@
 const router = require('express').Router()
+const auth = require('./auth')
 const Bottledata = require('../model/bottleDataSchema')
+
 //SMALL API FOR KNOWN BOTTLE TYPES
+
 let knownBottles = [
   {
     id: 1,
@@ -51,7 +54,7 @@ let bottleTransaction = {
   under1L: 0,
   bottleList: [],
   processed: false,
-  user: 'Jenny',
+  user: 'Guest',
 }
 // added keys and values to bottleTransaction
 
@@ -62,9 +65,10 @@ router.get('/bottles', (req, res) => {
 //WHERE THE BOTTLES PER TRANSACTION IS CALCULATED
 router.post('/bottles', function (req, res) {
   const scannedItem = req.body
-  console.log(`This is the Scanned Item: ${scannedItem}`)
-  console.log(`This should be a upc number ${scannedItem.upc}`)
+  const jwtvalue = req.cookies.jwt
 
+  console.log(`this is the jwtValue ${jwtvalue}`)
+  console.log(`this is ${scannedItem}`)
   knownBottles.forEach((bottle) => {
     if (scannedItem.upc === bottle.upc) {
       //bottleTransaction.id = bottleTransaction.length + 1
@@ -90,10 +94,11 @@ router.post('/bottles', function (req, res) {
     // console.log(`This is a test ${bottle.upc}`)
   })
   console.log(bottleTransaction)
-
+  //Finds the user
   //SENDS THE DATA TO THE DB
-  const createBottleDb = () => {
-    const bottleDataforDB = Bottledata({
+  async function createBottleDb() {
+    const bottleDataforDB = new Bottledata({
+      userID: jwtvalue,
       terminal: bottleTransaction.terminal,
       transactionNumber: bottleTransaction.transactionNumber,
       total: bottleTransaction.total,

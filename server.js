@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 //const request = require('request')
 const authRoute = require('./Routes/auth')
+const cookieParser = require('cookie-parser')
 const postRoute = require('./Routes/posts')
 const bottleRoute = require('./Routes/bottleTransaction')
 dotenv.config()
@@ -24,11 +25,11 @@ mongoose
 app.use(express.json())
 app.use(cors())
 app.use(express.static('.'))
+app.use(cookieParser())
 app.use('/api/user', authRoute)
 app.use('/api/posts', postRoute)
 app.use('/api/bottles', bottleRoute)
 app.use('/api/bottles2', bottleRoute)
-// app.use("/api/bottles3", bottleRoute);
 
 //PORTS
 //Don't forget to run export PORT=5000 in the terminal to set the port

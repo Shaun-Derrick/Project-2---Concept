@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     max: 1024,
-    min: 6,
+    min: 1,
   },
   email: {
     type: String,
@@ -29,13 +29,5 @@ const userSchema = new mongoose.Schema({
     default: Date.now,
   },
 })
-
-//ASSIGNING A TOKEN TO CONFIRM LOGGED IN PERSON
-userSchema.methods.generateAuthToken = function () {
-  console.log(`This is the id of the user that is found on DBmongo ${this._id}`)
-  const token = jwt.sign({ _id: this._id }, process.env.TOKEN)
-  console.log(`This is the token assigned to the _id in mongoDB ${token}`)
-  return token
-}
 
 module.exports = mongoose.model('User', userSchema)

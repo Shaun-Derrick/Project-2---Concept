@@ -66,13 +66,13 @@ form.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
     })
     const data = await res.json()
-  console.log(`This is from ${data.user}`)
+  console.log(`This is from ${JSON.stringify(data)}`)
   if (data.user) {
-      location.assign('/scan.html?token='+(data.user))
+      location.assign('/scan.html')
     }
   } 
   catch (err) {
-    console.log(err)
+    console.log(err.message)
   }
 })
 </script>
