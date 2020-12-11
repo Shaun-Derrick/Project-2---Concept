@@ -59,8 +59,8 @@
 
       <div class="boxNav">
         <ul class="nav_links">
-          <li >
-            <a href="scan.html">Continue Scanning as Guest</a>
+          <li id='button' >
+            <a>Continue Scanning as Guest</a>
           </li>
         </ul>
       </div>
@@ -70,11 +70,11 @@
       </div>
     </div>
     <script>
-      const form = document.querySelector('form')
-  form.addEventListener('click', async (e) => {
+      const guest = document.getElementById('button')
+  guest.addEventListener('click', async (e) => {
     e.preventDefault()
     const email = 'guest@email.com'
-    const password = 1
+    const password = '1'
     try {
       const res = await fetch('http://localhost:5000/api/user/login', {
         method: 'post',
