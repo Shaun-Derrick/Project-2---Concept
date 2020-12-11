@@ -13,7 +13,7 @@ function allBottles() {
 
 const urlParams = new URLSearchParams(window.location.search)
 const myParam = urlParams.get('token')
-
+console.log(myParam)
 function scanBottle() {
   const bottleUpc = document.getElementById('numberSubmit')
 

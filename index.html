@@ -6,6 +6,37 @@
   </head>
   <body>
     <div class="wrapper">
+      
+    <!--Step 1 : Adding HTML-->
+    <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> 
+  
+    <div id="id01" class="modal"> 
+  
+        <form class="modal-content animate" action="/action_page.php"> 
+            <div class="imgcontainer"> 
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+                <img src= 
+"images/recycle-green-earth.jpg" width="70%" height="70%" alt="Avatar" class="avatar"> 
+            </div> 
+  
+            <div class="container"> 
+                <label><b>Username</b></label> 
+                <input type="text" placeholder="Enter Username" name="uname" required> 
+  
+                <label><b>Password</b></label> 
+                <input type="password" placeholder="Enter Password" name="psw" required> 
+  
+                <button type="submit">Login</button> 
+                <input type="checkbox" checked="checked"> Remember me 
+            </div> 
+  
+            <div class="container" style="background-color:#f1f1f1"> 
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+                <span class="psw">Forgot <a href="#">password?</a></span> 
+            </div> 
+        </form> 
+    </div>  -->
+  
       <div class="boxTitle">
         <h1>
           BLUE BIN CONTAINER RECYCLING DEPOTS<br />MAKING RECYCLING EASY<br />BY
@@ -29,7 +60,7 @@
       <div class="boxNav">
         <ul class="nav_links">
           <li >
-            <a href="scan.html">Click Here To Start Scanning</a>
+            <a href="scan.html">Continue Scanning as Guest</a>
           </li>
         </ul>
       </div>
@@ -38,5 +69,28 @@
         call 867-5309
       </div>
     </div>
+    <script>
+      const form = document.querySelector('form')
+  form.addEventListener('click', async (e) => {
+    e.preventDefault()
+    const email = 'guest@email.com'
+    const password = 1
+    try {
+      const res = await fetch('http://localhost:5000/api/user/login', {
+        method: 'post',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      })
+      const data = await res.json()
+    console.log(`This is from ${JSON.stringify(data)}`)
+    if (data.user) {
+        location.assign('/scan.html')
+      }
+    } 
+    catch (err) {
+      console.log(err.message)
+    }
+  })
+  </script>
   </body>
 </html>

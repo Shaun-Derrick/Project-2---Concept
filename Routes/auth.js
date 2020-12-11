@@ -43,14 +43,14 @@ router.post('/register', async (req, res) => {
     const token = createToken(savedUser._id)
 
     console.log(`This is the JWT token: ${token}`)
+    res.cookie('jwt', token, { httpOnly: true, maxAge: age })
     res.header('auth-token', token)
-    //res.cookies('jwt', token, { httpOnly: true })
-    res.status(201).json({ user: user._id }) //This status is sent to redirect to the scan page.
+    res.status(201).json({ user: savedUser._id }) //This status is sent to redirect to the scan page.
 
     //res.status(201).json(savedUser)
     //res.redirect('/bottles')
   } catch (err) {
-    console.log(`What is being saved ${err.message}`)
+    console.log(`An error occurred ${err.message}`)
     res.status(400).send(err)
   }
 })
@@ -80,7 +80,7 @@ router.post('/login', async (req, res) => {
     res.cookie('jwt', token, { httpOnly: true, maxAge: age })
     res.header('auth-token', token)
     res.status(201).json({ user: savedUser._id })
-    throw new Error('Something went wrong')
+    //throw new Error('Something went wrong')
     //res.redirect('/bottles')
   } catch (err) {
     console.log(`this is the ${err.message}`)
