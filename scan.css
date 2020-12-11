@@ -80,9 +80,9 @@ ul {
   max-width: 50%vw;
   margin: 90px;
 }
-#orderBox {
-  display: flex;
-}
+/* #orderBox {
+  display: flex; 
+} */
 .boxNav {
   font-size: 50px;
   font-weight: 700;

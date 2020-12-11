@@ -4,7 +4,7 @@ const registerValidation = (data) => {
   const schema = Joi.object({
     firstname: Joi.string().min(3).required(),
     lastname: Joi.string().min(3).max(10).required(),
-    password: Joi.string().min(6).max(1024).required(),
+    password: Joi.string().min(1).max(1024).required(),
     email: Joi.string().min(3).required().email(),
   })
   console.log(`This is found in validate ${schema.validate(data)}`)

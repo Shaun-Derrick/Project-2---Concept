@@ -1,6 +1,6 @@
 const router = require('express').Router()
-const auth = require('./auth')
 const Bottledata = require('../model/bottleDataSchema')
+const jwt_decode = require('jwt-decode')
 
 //SMALL API FOR KNOWN BOTTLE TYPES
 
@@ -63,13 +63,17 @@ router.get('/bottles', (req, res) => {
   res.send(bottleTransaction)
 })
 //WHERE THE BOTTLES PER TRANSACTION IS CALCULATED
-router.post('/bottles', function (req, res) {
+router.post('/bottles', async function (req, res) {
   const scannedItem = req.body
   const jwtvalue = req.cookies.jwt
 
-  console.log(`this is the jwtValue ${jwtvalue}`)
-  console.log(`this is ${scannedItem}`)
-  knownBottles.forEach((bottle) => {
+  console.log(`this is the jwtValue ${req.cookies.jwt}`)
+  const decodedtoken = jwt_decode(jwtvalue)
+  console.log(`This is the decoded token ${decodedtoken.id}`)
+
+  console.log(`this is upc number ${scannedItem.upc}`)
+
+  await knownBottles.forEach((bottle) => {
     if (scannedItem.upc === bottle.upc) {
       //bottleTransaction.id = bottleTransaction.length + 1
 
@@ -95,23 +99,28 @@ router.post('/bottles', function (req, res) {
   })
   console.log(bottleTransaction)
   //Finds the user
-  //SENDS THE DATA TO THE DB
-  async function createBottleDb() {
-    const bottleDataforDB = new Bottledata({
-      userID: jwtvalue,
-      terminal: bottleTransaction.terminal,
-      transactionNumber: bottleTransaction.transactionNumber,
-      total: bottleTransaction.total,
-      value: bottleTransaction.value,
-      over1L: bottleTransaction.over1L,
-      under1L: bottleTransaction.under1L,
-      bottleList: bottleTransaction.bottleList,
-    })
 
-    resultBottleData = bottleDataforDB.save()
-    res.send(resultBottleData)
+  //SENDS THE DATA TO THE DB
+  if (jwtvalue === undefined) {
+    return null
+  } else {
+    async function createBottleDb() {
+      const bottleDataforDB = new Bottledata({
+        userID: decodedtoken.id,
+        terminal: bottleTransaction.terminal,
+        transactionNumber: bottleTransaction.transactionNumber,
+        total: bottleTransaction.total,
+        value: bottleTransaction.value,
+        over1L: bottleTransaction.over1L,
+        under1L: bottleTransaction.under1L,
+        bottleList: bottleTransaction.bottleList,
+      })
+
+      resultBottleData = bottleDataforDB.save()
+      res.send(resultBottleData)
+    }
+    createBottleDb(bottleTransaction)
   }
-  createBottleDb(bottleTransaction)
 })
 // added new post response to change processed key value from false to true
 router.post('/bottles2', (req, res) => {

@@ -2,19 +2,18 @@ function allBottles() {
   fetch("http://localhost:5000/api/bottles/bottles")
     .then((response) => response.json())
     .then((bottles) => {
-      let orderTable = `
-      <ul>
-          <li>$${bottles.value.toFixed(2)}</li>
-        </ul>`;
+      // let orderTable = `
+      // <ul>
+      //     <li>$${bottles.value.toFixed(2)}</li>
+      //   </ul>`
+      let orderTable = `<div>$${bottles.value.toFixed(2)}<div>`;
       document.getElementById("orderTable").innerHTML = orderTable;
     });
 }
 
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get("token");
-console.log(`This is myParam:${myParam}`);
-console.log(`This is my token: ${myParam}`);
-
+console.log(myParam);
 function scanBottle() {
   const bottleUpc = document.getElementById("numberSubmit");
 

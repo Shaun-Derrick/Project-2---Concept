@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 const bottleDataSchema = new mongoose.Schema({
-  // userID: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   required: true,
-  //   ref: 'User',
-  // },
+  userID: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: 'User',
+  },
   date: {
     type: Date,
     default: Date.now,

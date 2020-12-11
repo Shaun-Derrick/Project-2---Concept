@@ -28,6 +28,9 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  listOfBottles: {
+    type: 'array',
+  },
 })
 
 module.exports = mongoose.model('User', userSchema)
