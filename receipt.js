@@ -42,6 +42,21 @@ function reward() {
     "Your business is appreciated! We would like to show our apreciation to you by providing a coupon for $1.00 off your next coffee at our partner Good Earth Cafe.  The coupon is on the back of your receipt."
   );
 }
+function payPal() {
+  Alert.render(
+    "Your refund has been processed and deposited in your PayPal account."
+  );
+}
+function squareUp() {
+  Alert.render(
+    "Your refund has been processed and deposited in your SquareUp account."
+  );
+}
+function eTransfer() {
+  Alert.render(
+    "Your refund has been processed and deposited in your designated bank account."
+  );
+}
 
 function CustomAlert() {
   this.render = function (dialog) {

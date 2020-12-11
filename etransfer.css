@@ -1,134 +1,141 @@
 @font-face {
-    font-family: Oswald;
-    src: url(Oswald-VariableFont_wght.ttf);
+  font-family: Oswald;
+  src: url(Oswald-VariableFont_wght.ttf);
 }
 body {
-    font-family: Oswald; 
-    color: rgb(0, 81, 128);  
-    margin: 0px;
+  font-family: Oswald;
+  color: rgb(0, 81, 128);
+  margin: 0px;
 }
 .wrapper {
-    display: flex;
-    background-color: white;
-    border: 20px solid  rgb(0, 81, 128);
-    min-height: 100vh;
-    flex-wrap: wrap;
+  display: flex;
+  background-color: white;
+  border: 20px solid rgb(0, 81, 128);
+  min-height: 100vh;
+  flex-wrap: wrap;
 }
 .boxTitle {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 30px;
-    width: 50%vw;
-    height: auto,
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  width: 50%vw;
+  height: auto;
 }
 .boxTerminal {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: right;
-    align-content: flex-end;
-    padding-top: 0px;
-    padding-left: 700px;
-    width: 100%;
-    max-height: 50px,
+  font-size: 50px;
+  font-weight: 700;
+  text-align: right;
+  align-content: flex-end;
+  padding-top: 0px;
+  padding-left: 700px;
+  width: 100%;
+  max-height: 50px;
 }
 .boxLogo {
-    display: flex;
-    justify-content: right;
-    padding-top: 0px;
-    padding-left: 820px;
-    width: 50%vw;
-    height: 10px,
+  display: flex;
+  justify-content: right;
+  padding-top: 10px;
+  padding-left: 800px;
+  max-width: 50%vw;
+  height: 200px;
 }
 .boxInstructions {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 0px;
-    width: 100vw;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 0px;
+  width: 100vw;
 }
 .boxPayPal {
-    background-color: navy;
-    color: black;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 225px;
-    padding-right: 225px;;
-    width: 33%vw;
+  background-color: #4981ce;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 205px;
+  padding-right: 205px;
+  margin: 20px;
+  width: 33%vw;
 }
 .boxEtransfer {
-    background-color: lightseagreen;
-    color: black;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 230px;
-    padding-right: 230px;
-    width: 33%vw;
+  background-color: #4beddc;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 210px;
+  padding-right: 210px;
+  margin: 20px;
+  width: 33%vw;
 }
 .boxSquareUp {
-    background-color: rgb(230, 224, 255);
-    color: black;
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 225px;
-    padding-right: 225px;
-    width: 33%vw;
+  background-color: #9bc4e2;
+  color: black;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 205px;
+  padding-right: 205px;
+  margin: 20px;
+  width: 33%vw;
 }
 .boxNav {
-    font-size: 50px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    min-width: 100%;
+  font-size: 50px;
+  font-weight: 700;
+  background-color: #9bc4e2;
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  min-width: 100%;
 }
 .nav_links {
-    list-style: none;
+  list-style: none;
 }
 .nav_links li {
-    display: inline-block;
-    padding: 0px 70px;
-    text-align: center;
-    font-size: 50px;
-    font-weight: 700;
+  display: inline-block;
+  padding: 0px 0px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
 }
 .boxHelp {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100vw;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100vw;
 }
 .boxBody {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100vw;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100vw;
 }
 .boxReceipt {
-    background-color: lightseagreen;
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 100vw;
+  background-color: #9bc4e2;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 100vw;
 }
-
+ul {
+  list-style: none;
+}

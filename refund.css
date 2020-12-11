@@ -53,7 +53,7 @@ ul {
   width: 100vw;
 }
 .boxCash {
-  background-color: navy;
+  background-color: #4981ce;
   color: black;
   font-size: 50px;
   font-weight: 700;
@@ -65,7 +65,7 @@ ul {
   max-width: 33%vw;
 }
 .boxEtransfer {
-  background-color: lightseagreen;
+  background-color: #4beddc;
   color: black;
   font-size: 50px;
   font-weight: 700;
@@ -77,7 +77,7 @@ ul {
   max-width: 33%vw;
 }
 .boxDonate {
-  background-color: rgb(230, 224, 255);
+  background-color: #9bc4e2;
   color: black;
   font-size: 50px;
   font-weight: 700;
